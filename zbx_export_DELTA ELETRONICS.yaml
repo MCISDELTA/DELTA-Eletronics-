@@ -1,0 +1,820 @@
+zabbix_export:
+  version: '6.0'
+  date: '2022-06-30T19:46:07Z'
+  groups:
+    -
+      uuid: e55fb593535c47299e8075cb0c9c0309
+      name: UPS
+  templates:
+    -
+      uuid: c4072b995bb64f85b192d186b119ccbe
+      template: 'Delta Eletronics'
+      name: 'DELTA Eletronics'
+      description: 'OIDs Delta Eletronics'
+      groups:
+        -
+          name: UPS
+      items:
+        -
+          uuid: e5d6e72ddf75438ea570d0f9c552a93d
+          name: 'Tensao Bateria Baixa'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.3.0
+          key: dupsAlarmBatteryLow.0
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 5e767e7f8e5d4c41ac338b95163a0a39
+          name: 'Charger Fail'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.22.0
+          key: dupsAlarmChargerFail.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: cdc06de55e4d4ae7bfd5d02c043d2aef
+          name: 'Emergency Power Off'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.27.0
+          key: dupsAlarmEmergencyPowerOff.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: f0f8d782761349e49e83a352b0102484
+          name: 'Fan Fail'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.23.0
+          key: dupsAlarmFanFail.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 48b671cfae4b41d4acf207629a1f0700
+          name: 'Inverter Abnormal'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.14.0
+          key: dupsAlarmInverterAbnormal.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: ce01ac82930b4b5a852ab73c1eb418b4
+          name: 'Load On Bypass'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.6.0
+          key: dupsAlarmLoadOnBypass.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: fdc8aa07451b4dcfa77194207329b1d1
+          name: 'Load On Reserve'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.17.0
+          key: dupsAlarmLoadOnReserve.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: a4f0736352274a5480c38e25dce89878
+          name: 'Load Severity'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.5.0
+          key: dupsAlarmLoadSeverity.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 67e3d429402148b484bf6bff7a2d6a1d
+          name: 'Load Warning'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.4.0
+          key: dupsAlarmLoadWarning.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 8f6d0176b60d4ec292300332f23cd2d1
+          name: 'Output Off'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.25.0
+          key: dupsAlarmOutputOff.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 09602a21d9b84690b77f6d41e202ec69
+          name: 'Output Overload'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.12.0
+          key: dupsAlarmOutputOverload.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 9730593771d94702beb2cc950711a0cb
+          name: 'Over Env Humidity'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.10.10.0
+          key: dupsAlarmOverEnvHumidity.0
+          tags:
+            -
+              tag: Alarme
+            -
+              tag: EMS1000
+        -
+          uuid: 8ccc7a43603d485eba094417669a04c7
+          name: 'Over Env Temperature'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.10.9.0
+          key: dupsAlarmOverEnvTemperature.0
+          tags:
+            -
+              tag: Alarme
+            -
+              tag: EMS1000
+        -
+          uuid: 628ac00831c947319961883a0db6bbd4
+          name: 'Over Temperature'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.18.0
+          key: dupsAlarmOverTemperature.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 8a0d16419a574181984bd46a53f91bd4
+          name: 'Falha de Energia'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.2.0
+          key: dupsAlarmPowerFail.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 33d6d1d640834f1985f9f428b6f4f8f6
+          name: 'Bypass Abnormal'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.16.0
+          key: dupsAlarmReserveAbnormal.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 1949632b1369413bb6d675f78a2f638d
+          name: 'Smart Shutdown'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.26.0
+          key: dupsAlarmSmartShutdown.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 90f6431a49c5470d85cd4d2f5d4cbea7
+          name: 'Test In Progress'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.9.0
+          key: dupsAlarmTestInProgress.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 0d299aa2e309402d89444d4fa9c756b4
+          name: 'UPS Fault'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.7.0
+          key: dupsAlarmUPSFault.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 09805e9531a94b659e8f09b01a2034ae
+          name: 'UPS Off'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.9.21.0
+          key: dupsAlarmUPSOff.0
+          tags:
+            -
+              tag: Alarme
+        -
+          uuid: 3279a34ab5a64a01887f8a3cb8579dc1
+          name: 'Capacidade da Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.8.0
+          key: dupsBatteryCapacity.0
+          delay: 10s
+          units: '%'
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 17fdcf021f454e8793cfb019d0add315
+          name: 'Carregador Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.3.0
+          key: dupsBatteryCharge.0
+          delay: 30s
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 43ae1e3325c642198b28371dbe6a9e56
+          name: 'Condição da Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.1.0
+          key: dupsBatteryCondiction.0
+          delay: 30s
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 7b789518da7947369f4d929090fd56c6
+          name: 'Corrente da Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.7.0
+          key: dupsBatteryCurrent.0
+          delay: 10s
+          value_type: FLOAT
+          units: A
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 5139cb8fa35c42cebf8956df1e806a8c
+          name: 'Tempo estimado de Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.5.0
+          key: dupsBatteryEstimatedTime.0
+          delay: '10'
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 0af7860f4a5c46099abf53455a0355d8
+          name: 'Status da Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.2.0
+          key: dupsBatteryStatus.0
+          delay: 30s
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 953e4281e86b4e4e890124813e44fc4e
+          name: 'Tensao da Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.6.0
+          key: dupsBatteryVoltage.0
+          delay: 10s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 3c4e786849c34ecda253dcecfc3bb8c0
+          name: 'Tensao Bypass R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.6.3.0
+          key: dupsBypassVoltage1.0
+          delay: '30'
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 3efb20c210cc4b92a66d59334eef67f1
+          name: 'Tensao Bypass S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.6.7.0
+          key: dupsBypassVoltage2.0
+          delay: 30s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 1184a14c767e4f2f90ed66c677213258
+          name: 'Tensao Bypass T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.6.11.0
+          key: dupsBypassVoltage3.0
+          delay: 30s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 03fe86d8b94145d2ba47ad5e3f332eee
+          name: 'Config Buzzer Alarm'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.3.1.0
+          key: dupsConfigBuzzerAlarm.0
+          description: 'Configuração do Alarme'
+          tags:
+            -
+              tag: Configuracao
+        -
+          uuid: abc38f3f4eef472687c495ce2c2259a3
+          name: 'Config Buzzer Status'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.3.2.0
+          key: dupsConfigBuzzerState.0
+          description: 'Status da Campainha'
+          tags:
+            -
+              tag: Configuracao
+        -
+          uuid: 27c2af9ceebf4334b9fa53c0364281ad
+          name: 'Env Humidity'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.10.2.0
+          key: dupsEnvHumidity.0
+          units: '%'
+          tags:
+            -
+              tag: EMS1000
+        -
+          uuid: 1f53a05ad231451d9b849c55a77d6328
+          name: 'Env Temperature'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.10.1.0
+          key: dupsEnvTemperature.0
+          units: C
+          tags:
+            -
+              tag: EMS1000
+        -
+          uuid: f2136bbb573e400db865c2174cc3669d
+          name: Fabricante
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.1.1.0
+          key: dupsIdentManufacturer.0
+          trends: '0'
+          value_type: TEXT
+          description: Fabricante
+          tags:
+            -
+              tag: Identificação
+        -
+          uuid: 37d40d97246e42729a8d5617022845d9
+          name: Modelo
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.1.2.0
+          key: dupsIdentModel.0
+          trends: '0'
+          value_type: TEXT
+          description: 'Modelo do Nobreak'
+          tags:
+            -
+              tag: Identificação
+        -
+          uuid: ecb477655ed044158c26681c817b46d5
+          name: 'Versao do Firmware'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.1.3.0
+          key: dupsIdentUPSSoftwareVersion.0
+          tags:
+            -
+              tag: Identificação
+        -
+          uuid: 053e50c4eaf743b6b6fa931a3ae059d0
+          name: 'Corrente Entrada R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.4.0
+          key: dupsInputCurrent1.0
+          delay: 10s
+          value_type: FLOAT
+          units: A
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 988cd62a9d0f4f358ca7764907faa6c9
+          name: 'Corrente Entrada S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.7.0
+          key: dupsInputCurrent2.0
+          delay: 10s
+          units: A
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 9a2fbb09e9e14ad5a20f07a937a41f9e
+          name: 'Corrente Entrada T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.10.0
+          key: dupsInputCurrent3.0
+          delay: 10s
+          units: A
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: cf2b36f786c84a8b96973a0effb50815
+          name: 'Frequencia de Entrada R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.2.0
+          key: dupsInputFrequency1.0
+          delay: 10s
+          value_type: FLOAT
+          units: Hz
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: fb599f2d848649c098d2494799fe9c88
+          name: 'Frequencia de Entrada S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.5.0
+          key: dupsInputFrequency2.0
+          delay: 10s
+          value_type: FLOAT
+          units: Hz
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 73112a28feea4aad83b57ec012726263
+          name: 'Frequencia de Entrada T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.8.0
+          key: dupsInputFrequency3.0
+          delay: 10s
+          value_type: FLOAT
+          units: Hz
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: ccf530d7ef414f5387aa8b5930d23772
+          name: 'Numero de Fases'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.1.0
+          key: dupsInputNumLines.0
+          delay: 10s
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 06060b85039449e4ac7cfed7cabffc19
+          name: 'Tensao de Entrada R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.3.0
+          key: dupsInputVoltage1.0
+          delay: 10s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 1a8bfad16ca840f09f1c89f0bdae135f
+          name: 'Tensao de Entrada S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.6.0
+          key: dupsInputVoltage2.0
+          delay: 10s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 443657feecfe4c50ab9f310b7e84f212
+          name: 'Tensao de Entrada T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.4.9.0
+          key: dupsInputVoltage3.0
+          delay: 10s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Entrada
+        -
+          uuid: 84e4bdf1800e4f2a9c1374b5af64d253
+          name: 'Corrente Saída R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.5.0
+          key: dupsOutputCurrent1.0
+          delay: 10s
+          value_type: FLOAT
+          units: A
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: 0b599567bb5d4f229db7f6848229cb80
+          name: 'Corrente Saída S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.9.0
+          key: dupsOutputCurrent2.0
+          delay: 10s
+          value_type: FLOAT
+          units: A
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: bed0cd05593e48bb9e8b829b3ce87a0d
+          name: 'Corrente Saída T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.13.0
+          key: dupsOutputCurrent3.0
+          delay: 10s
+          value_type: FLOAT
+          units: A
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: 66cb6a193b8a4bd48aee621bbda90e5c
+          name: 'Carga Saida R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.7.0
+          key: dupsOutputLoad1.0
+          delay: 10s
+          units: '%'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: f5a15cf402fb4e42ad482335371f57d1
+          name: 'Carga Saida S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.11.0
+          key: dupsOutputLoad2.0
+          delay: 10s
+          units: '%'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: 9d543972bf4a4425bb6e6967ab31814f
+          name: 'Carga Saida T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.15.0
+          key: dupsOutputLoad3.0
+          delay: 10s
+          units: '%'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: 2140b6d4094d45d39dca7a73f1b780d0
+          name: 'Numero de Fases Saida'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.3.0
+          key: dupsOutputNumLines.0
+          delay: 10s
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: ffe1614c2bf94a4889046ed750fa12bd
+          name: 'Potencia Saída R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.6.0
+          key: dupsOutputPower1.0
+          delay: 10s
+          units: W
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: a44572b188dd4597b0682ed5c79a5bbb
+          name: 'Potencia Saída S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.10.0
+          key: dupsOutputPower2.0
+          delay: 10s
+          units: W
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: ffe2ec7adc87499e8275c10df6f45ff1
+          name: 'Potencia Saída T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.14.0
+          key: dupsOutputPower3.0
+          delay: 10s
+          units: W
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: ff85511e19194247ab827c495d5de4ec
+          name: 'Status do UPS'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.1.0
+          key: dupsOutputSource.0
+          delay: 10s
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: 9c6456204c5444988438232699de1c3f
+          name: 'Tensao de Saída R'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.4.0
+          key: dupsOutputVoltage1.0
+          delay: 10s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: 7f90c5309256478b841d19cc29041b8c
+          name: 'Tensao de Saída S'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.8.0
+          key: dupsOutputVoltage2.0
+          delay: 10s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: e4bf7430ec114519a8fab41cbccf5e0d
+          name: 'Tensao de Saída T'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.5.12.0
+          key: dupsOutputVoltage3.0
+          delay: 10s
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          tags:
+            -
+              tag: Saida
+        -
+          uuid: 090e879634ac406585dcdf06974670b0
+          name: 'Tensão Nominal da Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.1.12.0
+          key: dupsRatingBatteryVoltage.0
+          units: V
+          tags:
+            -
+              tag: Bateria
+        -
+          uuid: 8b9af05b81ca4c92aebe4afe4eb9b457
+          name: 'Tensao Nominal de Entrada'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.1.10.0
+          key: dupsRatingInputVoltage.0
+          units: V
+          tags:
+            -
+              tag: Identificação
+        -
+          uuid: 935bf230e134473fb65e94447f7b9f54
+          name: 'Potencia Nominal do UPS'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.1.7.0
+          key: dupsRatingOutputVA.0
+          delay: 30s
+          units: KVA
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '.001'
+          tags:
+            -
+              tag: Identificação
+        -
+          uuid: 32ccbd8435454b90963449e360cd870f
+          name: 'Tensão Nominal de Saída'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.1.8.0
+          key: dupsRatingOutputVoltage.0
+          units: V
+          tags:
+            -
+              tag: Identificação
+        -
+          uuid: 8fbfa3bfdb1f436697b07184c01733f4
+          name: 'Tenpo em Bateria'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2254.2.4.7.4.0
+          key: dupsSecondsOnBattery.0
+          delay: 10s
+          tags:
+            -
+              tag: Bateria
